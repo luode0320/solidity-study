@@ -2,6 +2,7 @@
 // Solidity版本声明
 pragma solidity ^0.8.0;
 
+// sepolia 测试网合约地址: 0xEaE27D9ad1AAd678B9B391375d3642843A566961
 contract HelloWorld {
     // 网络:  事件声明
     event Log(address indexed sender, string message);
