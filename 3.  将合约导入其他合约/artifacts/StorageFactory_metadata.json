@@ -1,0 +1,117 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "createSimpleStorageContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "sfGet",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "sfStore",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "simpleStorageArray",
+				"outputs": [
+					{
+						"internalType": "contract SimpleStorage",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"3.  将合约导入其他合约/StorageFactory.sol": "StorageFactory"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"3.  将合约导入其他合约/SimpleStorage.sol": {
+			"keccak256": "0x8f71b3f725841ef3f143cb56a4d1bf35743ec542722b90bef3c15ee06f3b26c8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://185cee3dc7377708e375870e92874d4af0ab91f9c217d88192645f8d7e46ccab",
+				"dweb:/ipfs/QmePBKxTfUYMYemRQLsKQmUCHnzrQaC3VK13RDBz5Cj7Hj"
+			]
+		},
+		"3.  将合约导入其他合约/StorageFactory.sol": {
+			"keccak256": "0xd7374d30f2eb6cb24e14cbf87b63d134569b62418b75cdd5f86e5e36bf2f0f89",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://61ad5725cd6ec726f88a3cc58bec81dfb1e8c2ad468be4dad9c5ec677a720722",
+				"dweb:/ipfs/QmcGCwE4GaW7W3Rbuh8vajFfjWd3Zerhg24ABpxBVTZQbR"
+			]
+		}
+	},
+	"version": 1
+}
