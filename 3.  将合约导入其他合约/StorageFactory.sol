@@ -3,6 +3,7 @@ pragma solidity ^0.8.7;
 
 import "./SimpleStorage.sol";
 
+// sepolia 测试网合约地址: 0xB71fA27060F9c901746360317f9Cd98AFE3e2d22
 contract StorageFactory {
     SimpleStorage[] public simpleStorageArray;
 

@@ -121,11 +121,11 @@
 	},
 	"sources": {
 		"3.  将合约导入其他合约/SimpleStorage.sol": {
-			"keccak256": "0x8f71b3f725841ef3f143cb56a4d1bf35743ec542722b90bef3c15ee06f3b26c8",
+			"keccak256": "0x7fa2270757528cf6825c16bdff7ae0a8e42a45bfab2863bef684185522bd0e3e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://185cee3dc7377708e375870e92874d4af0ab91f9c217d88192645f8d7e46ccab",
-				"dweb:/ipfs/QmePBKxTfUYMYemRQLsKQmUCHnzrQaC3VK13RDBz5Cj7Hj"
+				"bzz-raw://7306c1cc8855ab0ad4c24eba8b84a687d719e46e59115ee156e6a1a79d153c8c",
+				"dweb:/ipfs/QmeKLgSLtQV6EdrsFHecJKXD8oR7Gexs2SafreZHoDrhjG"
 			]
 		}
 	},
