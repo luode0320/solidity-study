@@ -106,7 +106,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"2. 一个简单的storage 示例/SimpleStorage.sol": "SimpleStorage"
+			"2. 一个简单的storage/SimpleStorage.sol": "SimpleStorage"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -120,7 +120,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"2. 一个简单的storage 示例/SimpleStorage.sol": {
+		"2. 一个简单的storage/SimpleStorage.sol": {
 			"keccak256": "0xb22ea64ccdb795a486cd292fb9411a604cca793baa38ef72895da016dfab0b7a",
 			"license": "MIT",
 			"urls": [
