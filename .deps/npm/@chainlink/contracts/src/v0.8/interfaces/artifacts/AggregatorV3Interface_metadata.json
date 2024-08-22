@@ -1,0 +1,157 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "description",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint80",
+						"name": "_roundId",
+						"type": "uint80"
+					}
+				],
+				"name": "getRoundData",
+				"outputs": [
+					{
+						"internalType": "uint80",
+						"name": "roundId",
+						"type": "uint80"
+					},
+					{
+						"internalType": "int256",
+						"name": "answer",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updatedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint80",
+						"name": "answeredInRound",
+						"type": "uint80"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "latestRoundData",
+				"outputs": [
+					{
+						"internalType": "uint80",
+						"name": "roundId",
+						"type": "uint80"
+					},
+					{
+						"internalType": "int256",
+						"name": "answer",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updatedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint80",
+						"name": "answeredInRound",
+						"type": "uint80"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "version",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/npm/@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": "AggregatorV3Interface"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/npm/@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0xe65c44e9fec596408eac42136cb2a1676ff5ca5457c24af15a49e64390f2f93c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c05127a4071b8f033a3acfde9245f0ee35b969567d4e71f57d917398c9f11495",
+				"dweb:/ipfs/QmVDHLtvwXX828gmdv5TLFX9nKbCrLcNFQg8bs5LEUdjCN"
+			]
+		}
+	},
+	"version": 1
+}
