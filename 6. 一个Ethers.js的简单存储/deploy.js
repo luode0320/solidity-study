@@ -14,16 +14,27 @@ async function main() {
     // 旧的方式可以在下面看到：
     // let provider=new ethers.providers。JsonRpcProvider（进程.env.RPC_URL）
     // 在以太坊6及以上版本上，你应该这样使用
-    let provider = new ethers.JsonRpcProvider(process.env.RPC_URL)
-    let wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
+    // let provider = new ethers.JsonRpcProvider(process.env.RPC_URL)
+    // let wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
 
     // 使用加密过的私钥连接上一个钱包
+    //let provider = new ethers.JsonRpcProvider(process.env.RPC_URL)
     // const encryptedJson = fs.readFileSync("./.encryptedKey.json", "utf8");
     // let wallet = ethers.Wallet.fromEncryptedJsonSync(
     //     encryptedJson,
     //     process.env.PRIVATE_KEY_PASSWORD
     // );
     // wallet = wallet.connect(provider);
+
+
+    // 使用geth加密过的私钥连接上一个钱包
+    let provider = new ethers.JsonRpcProvider(process.env.GETH_RPC_URL)
+    const encryptedJson = fs.readFileSync("./.gethencryptedKey.json", "utf8");
+    let wallet = ethers.Wallet.fromEncryptedJsonSync(
+        encryptedJson,
+        process.env.GETH_PRIVATE_KEY_PASSWORD
+    );
+    wallet = wallet.connect(provider);
 
     // 现在我们已经连接上了 process.env.RPC_URL 的 ganache 测试网络
     // 并且使用 process.env.PRIVATE_KEY 私钥, 连接上了一个钱包
