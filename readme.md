@@ -1,3 +1,3 @@
-## HelloWorld
+## 你好啊!
 
-这是一个solidity的案例库
+这是一个solidity从入门到放弃的学习路线!
