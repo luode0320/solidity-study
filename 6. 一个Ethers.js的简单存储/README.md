@@ -76,7 +76,14 @@ node encryptkey.js
 
 ```
 
+启动:
+
+```shell
+node deploy.js
+```
+
 此时, 你将不再需要 `PRIVATE_KEY` 的环境变量, 因为生成的[密钥文件](.encryptedKey.json)就是私钥, 但是需要配合`PRIVATE_KEY_PASSWORD`密码才能使用
+
 
 # 使用geth测试网络
 
@@ -129,4 +136,63 @@ eth.getBalance(eth.accounts[1])
         process.env.GETH_PRIVATE_KEY_PASSWORD
     );
     wallet = wallet.connect(provider);
+```
+
+启动:
+
+```shell
+node deploy.js
+```
+
+# 使用infura连接sepolia网络
+
+登录注册[https://app.infura.io/](https://app.infura.io/), 获取密钥
+
+![alt text](img/image5.png)
+
+```shell
+# 测试 sepolia 网络, holesky,mainnet,sepolia
+curl --url https://sepolia.infura.io/v3/148a68faba8144cdab5323f99578458d   \
+-X POST   -H "Content-Type: application/json"   \
+-d '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
+```
+
+在 `.env` 中填写自己的私钥, 是自己钱包的私钥
+```shell
+INFURA_RPC_URL=https://sepolia.infura.io/v3/148a68faba8144cdab5323f99578458d
+INFURA_PRIVATE_KEY=<自己钱包的私钥>
+```
+
+调整 `deploy.js` 中的连接
+```js
+    // let provider = new ethers.JsonRpcProvider(process.env.RPC_URL)
+    // let wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
+
+    // 使用加密过的私钥连接上一个钱包
+    //let provider = new ethers.JsonRpcProvider(process.env.RPC_URL)
+    // const encryptedJson = fs.readFileSync("./.encryptedKey.json", "utf8");
+    // let wallet = ethers.Wallet.fromEncryptedJsonSync(
+    //     encryptedJson,
+    //     process.env.PRIVATE_KEY_PASSWORD
+    // );
+    // wallet = wallet.connect(provider);
+
+    // 使用geth加密过的私钥连接上一个钱包
+    // let provider = new ethers.JsonRpcProvider(process.env.GETH_RPC_URL)
+    // const encryptedJson = fs.readFileSync("./.gethencryptedKey.json", "utf8");
+    // let wallet = ethers.Wallet.fromEncryptedJsonSync(
+    //     encryptedJson,
+    //     process.env.GETH_PRIVATE_KEY_PASSWORD
+    // );
+    // wallet = wallet.connect(provider);
+
+    // 使用 infura 的私钥连接一个钱包
+    let provider = new ethers.JsonRpcProvider(process.env.INFURA_RPC_URL);
+    let wallet = new ethers.Wallet(process.env.INFURA_PRIVATE_KEY, provider)
+```
+
+启动:
+
+```shell
+node deploy.js
 ```
