@@ -1,5 +1,6 @@
 const { task } = require("hardhat/config")
 
+// yarn hardhat block-number --network sepolia
 task("block-number", "打印当前区块高度").setAction(
   // const blockTask = async function() => {}
   // async function blockTask() {}

@@ -2,7 +2,7 @@
 require("@nomiclabs/hardhat-waffle");
 // 引入gas费用报告生成器
 require("hardhat-gas-reporter");
-// 引入自定义的任务，如获取区块编号
+// 引入自定义的任务，如获取区块编号。yarn hardhat block-number --network sepolia
 require("./tasks/block-number");
 // 引入环境变量配置，用于安全管理敏感信息
 require("dotenv").config();
