@@ -58,12 +58,12 @@ async function main() {
     console.log(contract)
 
     // 等待一个区块确认
-    const deploymentReceipt = await contract.deploymentTransaction().wait(1)
-    console.log(`合同部署到 ${contract.address}`)
-    console.log("这是交易记录:")
-    console.log(contract.deployTransaction)
+    console.log("等待确认完成...")
+    const deploymentReceipt = await contract.deploymentTransaction().wait(1, 120 * 1000)
     console.log("这是收据:")
     console.log(deploymentReceipt)
+
+    console.log(`区块浏览器: https://sepolia.etherscan.io/address/${deploymentReceipt.contractAddress}`)
 
     // console.log("让我们部署另一个测试交易, 尽管正常我们不会这么做！请稍候...")
 
@@ -101,8 +101,9 @@ async function main() {
 
     currentFavoriteNumber = await contract.retrieve()
     console.log(`调用合约 retrieve() 查询当前存储的号码: ${currentFavoriteNumber}`)
-}
 
+    console.log(`区块浏览器: https://sepolia.etherscan.io/address/${deploymentReceipt.contractAddress}`)
+}
 
 // 调用main, 开始等待异步响应, 如果出现错误则打印
 main()
