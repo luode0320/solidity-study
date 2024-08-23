@@ -10,7 +10,8 @@
     "ethers": "^5.5.3",
     "hardhat": "^2.22.9",
     "hardhat-gas-reporter": "^1.0.7",
-    "solidity-coverage": "^0.7.18"
+    "solidity-coverage": "^0.7.18",
+    "undici": "^6.19.8"
   },
   "dependencies": {
     "dotenv": "^14.2.0",

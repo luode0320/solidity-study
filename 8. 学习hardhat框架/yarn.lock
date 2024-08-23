@@ -8424,6 +8424,11 @@ undici@^5.14.0:
   dependencies:
     "@fastify/busboy" "^2.0.0"
 
+undici@^6.19.8:
+  version "6.19.8"
+  resolved "https://registry.npmmirror.com/undici/-/undici-6.19.8.tgz#002d7c8a28f8cc3a44ff33c3d4be4d85e15d40e1"
+  integrity sha512-U8uCCl2x9TK3WANvmBavymRzxbfFYG+tAu+fgx3zxQy3qdagQqBLwJVrdyO1TBfUXvfKveMKJZhpvUYoOjM+4g==
+
 union-value@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/union-value/-/union-value-1.0.1.tgz#0b6fe7b835aecda61c6ea4d4f02c14221e109847"

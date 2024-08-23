@@ -5,106 +5,63 @@ cd 8.\ 学习hardhat框架/
 yarn add --dev hardhat
 ```
 
-# Usage
+# 命令解释
 
-Deploy:
+```shell
+全局选项:
+选项	              描述
+--config	          指定一个 Hardhat 配置文件。
+--emoji	            在消息中使用表情符号。
+--flamegraph	      为你的 Hardhat 任务生成火焰图。
+--help	            显示此帮助信息，或如果提供了任务名称，则显示该任务的帮助信息。
+--max-memory	      设置 Hardhat 可使用的最大内存量。
+--network	          指定连接的网络。
+--show-stack-traces	显示堆栈跟踪（在 CI 服务器上始终启用）。
+--tsconfig	        指定一个 TypeScript 配置文件。
+--typecheck	        启用 TypeScript 对你的脚本/测试进行类型检查。
+--verbose	          启用 Hardhat 的详细日志记录。
+--version	          显示 Hardhat 的版本。
 
+可用的任务:
+任务	              描述
+block-number	      打印当前区块号。
+check	              检查你需要的任何内容。
+clean	              清除缓存并删除所有制品。
+compile	            编译整个项目，构建所有制品。
+console	            打开一个 Hardhat 控制台。
+coverage	          为测试生成代码覆盖率报告。
+flatten	            展平并打印合约及其依赖项。如果没有指定文件，则展平项目中的所有合约。
+gas-reporter:merge	（未提供详细描述）
+help	              打印此帮助信息。
+node	              启动一个基于 Hardhat Network 的 JSON-RPC 服务器。
+run	                在编译项目后运行用户定义的脚本。
+test	              运行 Mocha 测试。
+verify	            在 Etherscan 或 Sourcify 上验证合约。
+
+可用的任务范围:
+范围	              描述
+vars	            管理你的配置变量。
 ```
+
+# 编译
+
+```shell
+yarn hardhat compile
+```
+
+# 在编译项目后运行用户定义的脚本
+run: 隐含了编译步骤
+```shell
 yarn hardhat run scripts/deploy.js
 ```
 
-## Testing
+指定名称的测试网络
 
+```shell
+# 默认
+yarn hardhat run scripts/deploy.js --network hardhat
+# 本地启动的一个网络
+yarn hardhat run scripts/deploy.js --network localhost
+# sepolia 测试网
+yarn hardhat run scripts/deploy.js --network sepolia
 ```
-npx hardhat test
-```
-
-### Test Coverage
-
-```
-npx hardhat coverage
-```
-
-## Estimate gas
-
-You can estimate how much gas things cost by running:
-
-```
-npx hardhat test
-```
-
-And you'll see and output file called `gas-report.txt`
-
-## Local Deployment 
-
-If you'd like to run your own local hardhat network, you can run:
-
-```
-npx hardhat node
-```
-
-And then **in a different terminal**
-
-```
-npx hardhat run scripts/deploy.js --network localhost
-```
-
-And you should see transactions happen in your terminal that is running `npx hardhat node`
-
-### Important localhost note
-
-If you use metamask with a local network, everytime you shut down your node, you'll need to reset your account. Settings -> Advanced -> Reset account. Don't do this with a metamask you have real funds in. And maybe don't do this if you're a little confused by this. 
-
-## Deployment to a testnet or mainnet
-
-1. Setup environment variables
-
-You'll want to set your `SEPOLIA_RPC_URL` and `PRIVATE_KEY` as environment variables. You can add them to a `.env` file, similar to what you see in `.env.example`.
-
-- `PRIVATE_KEY`: The private key of your account (like from [metamask](https://metamask.io/)). **NOTE:** FOR DEVELOPMENT, PLEASE USE A KEY THAT DOESN'T HAVE ANY REAL FUNDS ASSOCIATED WITH IT.
-  - You can [learn how to export it here](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
-- `SEPOLIA_RPC_URL`: This is url of the sepolia testnet node you're working with. You can get setup with one for free from [Alchemy](https://alchemy.com/?a=673c802981)
-
-2. Get testnet ETH
-
-Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesnet ETH. You should see the ETH show up in your metamask.
-
-3. Deploy
-
-```
-npx hardhat run scripts/deploy.js --network sepolia
-```
-
-### Verify on etherscan
-
-If you deploy to a testnet or mainnet, you can verify it if you get an [API Key](https://etherscan.io/myapikey) from Etherscan and set it as an environment variable named `ETHERSCAN_API_KEY`. You can pop it into your `.env` file as seen in the `.env.example`.
-
-In it's current state, if you have your api key set, it will auto verify sepolia contracts!
-
-However, you can manual verify with:
-
-```
-npx hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
-```
-
-# Linting
-
-To check linting / code formatting:
-```
-yarn lint
-```
-or, to fix: 
-```
-yarn lint:fix
-```
-
-# Thank you!
-
-If you appreciated this, feel free to follow me or donate!
-
-ETH/Polygon/Avalanche/etc Address: 0x9680201d9c93d65a3603d2088d125e955c73BD65
-
-[![Patrick Collins Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/PatrickAlphaC)
-[![Patrick Collins YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCn-3f8tw_E1jZvhuHatROwA)
-[![Patrick Collins Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/patrickalphac/)
-[![Patrick Collins Medium](https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@patrick.collins_58673/)

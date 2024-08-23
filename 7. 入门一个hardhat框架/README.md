@@ -57,3 +57,4 @@ verify	            在 Etherscan 或 Sourcify 上验证合约。
 可用的任务范围:
 范围	            描述
 vars	            管理你的配置变量。
+```
