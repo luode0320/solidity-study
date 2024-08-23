@@ -59,9 +59,9 @@ module.exports = {
     // 本地主机网络配置
     localhost: {
       // 本地以太坊节点URL
-      url: "http://localhost:8545",
+      url: "http://127.0.0.1:8545",
       // 本地网络的链ID
-      chainId: 1337,
+      chainId: 31337,
     },
   },
 

@@ -60,8 +60,15 @@ yarn hardhat run scripts/deploy.js
 ```shell
 # 默认
 yarn hardhat run scripts/deploy.js --network hardhat
-# 本地启动的一个网络
-yarn hardhat run scripts/deploy.js --network localhost
 # sepolia 测试网
 yarn hardhat run scripts/deploy.js --network sepolia
+```
+
+# 启动一个网络
+
+```shell
+# 单独以恶搞窗口启动
+yarn hardhat node
+# 允许一个脚本运行在网络中
+yarn hardhat run scripts/deploy.js  --network localhost
 ```
