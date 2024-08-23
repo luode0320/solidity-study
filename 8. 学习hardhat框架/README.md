@@ -1,7 +1,7 @@
 # 安装hardhat
 
 ```shell
-cd 7.\ 学习hardhat框架/
+cd 8.\ 学习hardhat框架/
 yarn add --dev hardhat
 ```
 
