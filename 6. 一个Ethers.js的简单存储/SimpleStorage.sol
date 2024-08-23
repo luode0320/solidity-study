@@ -2,7 +2,7 @@
 // Solidity版本声明
 pragma solidity ^0.8.7;
 
-// sepolia 测试网合约地址: 0xE39d780A347c98107A94b50bd785469D2E42c2bD
+// sepolia 测试网合约地址: 0xA39e0ffc2cF07c6234eC1C47BC791505A734D0Ac
 contract SimpleStorage {
     uint256 favoriteNumber; // 状态变量，用于存储单个收藏夹数字
 
