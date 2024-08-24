@@ -80,11 +80,13 @@ module.exports = {
     enabled: true,
     // 报告中使用的货币单位
     currency: "USD",
-    // gas报告的输出文件
-    outputFile: "gas-report.txt",
-    // 禁用报告中的颜色输出
-    noColors: true,
     // CoinMarketCap API密钥，用于获取加密货币价格
     coinmarketcap: COINMARKETCAP_API_KEY,
+    // 不同的网络，gas报告会根据网络不同而变化, 默认是 Ethereum 是 ETH, Polygon 是 MATIC
+    token: "ETH",
+    // gas报告的输出文件: 如果输出到文件就不会在控制台输出
+    // outputFile: "gas-report.txt",
+    // // 禁用报告中的颜色输出
+    // noColors: true,
   },
 }

@@ -1,3 +1,42 @@
+# 依赖说明
+
+```json
+"devDependencies": {
+  // 用于验证部署在以太坊主网上的智能合约
+  "@nomicfoundation/hardhat-verify": "^2.0.3",
+
+  // 允许使用Ethers.js作为硬帽（Hardhat）的任务运行器插件
+  "@nomiclabs/hardhat-ethers": "^2.0.4",
+
+  // 用于将智能合约部署到以太坊网络，并自动上传源代码到Etherscan进行验证
+  "@nomiclabs/hardhat-etherscan": "^3.0.0",
+
+  // 提供了编译、部署智能合约所需的工具，以及集成测试环境
+  "@nomiclabs/hardhat-waffle": "^2.0.2",
+
+  // JavaScript断言库，用于编写测试用例
+  "chai": "^4.3.4",
+
+  // 用于构建以太坊应用程序的库，提供了Web3 API的现代替代方案
+  "ethereum-waffle": "^3.4.0",
+
+  // 一个现代以太坊JavaScript库
+  "ethers": "^5.5.3",
+
+  // 一个现代以太坊开发框架
+  "hardhat": "^2.22.9",
+
+  // 用于报告Gas消耗的硬帽插件
+  "hardhat-gas-reporter": "^1.0.7",
+
+  // 用于测量和报告Solidity智能合约的代码覆盖率
+  "solidity-coverage": "^0.7.18",
+
+  // 一个轻量级的HTTP客户端，用于替代Node.js的原生http模块
+  "undici": "^6.19.8"
+}
+```
+
 # 安装hardhat
 
 ```shell
@@ -82,4 +121,13 @@ yarn hardhat console  --network localhost
 yarn hardhat test
 # 只启动包含 额外 的测试
 yarn hardhat test --grep "额外"
+```
+
+启用测试gas消耗[获取api key](https://coinmarketcap.com/)
+
+
+# 代码覆盖率
+会检测我们的测试案例, 提醒我们有多少代码没有被测试
+```shell
+yarn hardhat coverage
 ```
