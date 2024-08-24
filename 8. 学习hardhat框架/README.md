@@ -71,4 +71,15 @@ yarn hardhat run scripts/deploy.js --network sepolia
 yarn hardhat node
 # 允许一个脚本运行在网络中
 yarn hardhat run scripts/deploy.js  --network localhost
+# 你还可以单独打开一个 javascript 控制台使用
+yarn hardhat console  --network localhost
+```
+
+# 测试环节
+
+```shell
+# 启动所有测试用例
+yarn hardhat test
+# 只启动包含 额外 的测试
+yarn hardhat test --grep "额外"
 ```
